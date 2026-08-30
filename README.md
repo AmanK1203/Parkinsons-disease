@@ -82,8 +82,54 @@ These features are then used to train machine learning classification models.
 The objective of this project is to develop a machine learning-based system that can classify samples into:
 
 
+# 🌐 Streamlit Web Application
+
+A user-friendly Streamlit web application was developed to integrate the trained models and provide an interactive prediction interface.
+
+Users can upload a spiral or wave drawing and obtain the model's prediction.
+
+---
+
 # 📄 Project Output
 
-The complete project output, including the application results, model performance and prediction results, is available in the PDF below.
+The complete project implementation and output, including model results and application output, is available in the PDF below.
 
-👉 **[View Project Output PDF](Implementaion & Output.pdf)**
+👉 **[View Implementation & Output PDF](Implementation%20%26%20Output.pdf)**
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| **Python** | Model development and application development |
+| **TensorFlow / Keras** | Deep Learning model development and training |
+| **VGG16** | Transfer learning for image classification |
+| **ResNet50** | Transfer learning for image classification |
+| **DenseNet121** | Transfer learning for image classification |
+| **Custom CNN** | Image-based Parkinson's classification |
+| **Scikit-learn** | Machine Learning model development and evaluation |
+| **SVM** | Audio-based classification |
+| **Random Forest** | Audio-based classification |
+| **Librosa** | Audio processing and acoustic feature extraction |
+| **NumPy** | Numerical and array operations |
+| **Pandas** | Data processing and analysis |
+| **OpenCV / PIL** | Image processing and preprocessing |
+| **Jupyter Notebook** | Model development and experimentation |
+| **Streamlit** | Interactive web application for prediction |
+| **Git / GitHub** | Version control and project hosting |
+
+## 🧠 Machine Learning & Deep Learning Techniques
+
+- Convolutional Neural Networks (CNN)
+- Transfer Learning
+- VGG16
+- ResNet50
+- DenseNet121
+- Image Classification
+- Data Augmentation
+- Model Evaluation
+- Support Vector Machine (SVM)
+- Random Forest
+- Audio Feature Extraction
+- MFCC
