@@ -1,58 +1,105 @@
-Parkinson's Disease Prediction using Deep Learning
-This project aims to predict Parkinson's Disease using deep learning models trained on both
-hand-drawn images (spiral and wave) and audio-based features. A user-friendly Streamlit
-web app has also been developed for real-time prediction. Project Structure
+# 🧠 Parkinson's Disease Prediction Using Deep Learning
 
-├── Training/
-│ ├── spiral/
-│ │ ├── healthy/
-│ │ └── parkinsons/
-│ ├── wave/
-│ │ ├── healthy/
-│ │ └── parkinsons/
-├── Testing/
-│ ├── healthy/
-│ └── parkinsons/
-├── Validation/
-│ ├── healthy/
-│ └── parkinsons/
-├── models/
-│ ├── vgg16_model.h5
-│ ├── resnet50_model.h5
-│ ├── densenet121_model.h5
-│ └── cnn_model.h5
-├── app.py
-├── audio_model.py
-├── requirements.txt
-└── README.md
+## 📌 Project Overview
 
-Features
---> Image-based classification using:
-o VGG16
-o ResNet50
-o DenseNet121
-o Custom CNN
+This project focuses on predicting Parkinson's Disease using Deep Learning and Machine Learning techniques.
 
-Dataset Details
-Image Dataset -- Train Set: Spiral and wave drawings (healthy/parkinsons) -- Test Set: Separate spiral and wave images (healthy/parkinsons) -- Validation Set: For model evaluation
-Audio Dataset -- Extracted acoustic features from patient voice recordings. -- Used to train models separately and select the best performer. Models and Accuracy
-Model Dataset Type Accuracy (approx)
-VGG16 Image ~92%
-ResNet50 Image ~90%
-DenseNet121 Image ~93%
-CNN (Custom) Image ~88%
-Best Audio Model Audio ~95%
-How to Run
-1. Install Requirements
-pip install -r requirements.txt
-2. Run Streamlit App
-streamlit run GR18_AD_24-25_Streamlit_validator_parkisons.exe.py
-3. Predict Parkinson's Disease
---> Upload spiral or wave image
---> The app will return whether the person is healthy or has Parkinson's
-Model Training
-Image Models
-Trained using:  Data augmentation
---> Cross-validation
---> Categorical labels: 0 (Healthy), 1 (Parkinson's)
-Audio Model  Features extracted: MFCC, Chroma, Zero-Crossing Rate, etc.  Used classification models like SVM, Random Forest, etc.  Selected based on performance metrics
+The system analyzes two different types of data:
+
+- 🖼️ Hand-drawn spiral and wave images
+- 🎙️ Audio-based acoustic features extracted from patient voice recordings
+
+For image-based prediction, multiple deep learning architectures were trained and evaluated, including VGG16, ResNet50, DenseNet121, and a Custom CNN.
+
+An interactive web application was also developed using Streamlit to provide a user-friendly interface for making predictions.
+
+---
+
+## 🎯 Project Objective
+
+The primary objective of this project is to develop an automated machine learning system that can assist in identifying patterns associated with Parkinson's Disease from:
+
+1. Hand-drawn spiral and wave images
+2. Voice/audio-based features
+
+The project compares different models and evaluates their performance to identify suitable models for prediction.
+
+> **Note:** This project is intended for educational and research purposes and should not be considered a medical diagnostic system.
+
+---
+
+# 🚀 Key Features
+
+### 🖼️ Image-Based Parkinson's Detection
+
+The system classifies hand-drawn images into:
+
+- Healthy
+- Parkinson's
+
+The image-based models include:
+
+- VGG16
+- ResNet50
+- DenseNet121
+- Custom CNN
+
+### 🎙️ Audio-Based Prediction
+
+The project also analyzes acoustic features extracted from patient voice recordings.
+
+Features include:
+
+- MFCC
+- Chroma
+- Zero-Crossing Rate
+- Other extracted acoustic features
+
+Classification models such as:
+
+- SVM
+- Random Forest
+- Other classification approaches
+
+were evaluated based on their performance.
+
+### 🌐 Streamlit Application
+
+A Streamlit-based application provides a user-friendly interface for real-time prediction.
+
+Users can upload a spiral or wave drawing and receive a model prediction.
+
+---
+
+# 🏗️ Project Architecture
+
+```text
+                    Parkinson's Disease Prediction
+                              │
+              ┌───────────────┴───────────────┐
+              │                               │
+        Image-Based Data                 Audio-Based Data
+              │                               │
+       Spiral / Wave Images             Voice Recordings
+              │                               │
+              ▼                               ▼
+       Image Preprocessing             Feature Extraction
+              │                               │
+              ▼                               ├── MFCC
+        Data Augmentation               ├── Chroma
+              │                         └── Zero-Crossing Rate
+              ▼                               │
+       Deep Learning Models                    ▼
+              │                         ML Classification
+      ┌───────┼────────┐                       │
+      │       │        │                       │
+    VGG16  ResNet50 DenseNet121                │
+      │       │        │                       │
+      └───────┼────────┘                       │
+              │                                │
+              ▼                                ▼
+          Prediction                       Prediction
+              │                                │
+              └──────────────┬─────────────────┘
+                             ▼
+                      Streamlit Application
