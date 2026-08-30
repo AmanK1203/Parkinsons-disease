@@ -81,5 +81,9 @@ These features are then used to train machine learning classification models.
 
 The objective of this project is to develop a machine learning-based system that can classify samples into:
 
-```text
-Healthy
+
+# 📄 Project Output
+
+The complete project output, including the application results, model performance and prediction results, is available in the PDF below.
+
+👉 **[View Project Output PDF](Implementaion & Output.pdf)**
